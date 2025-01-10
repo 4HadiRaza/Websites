@@ -1,0 +1,476 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fdf6f0; /* Soft pastel background */
+  color: #4f4a4a;
+  line-height: 1.6;
+}
+
+/* General Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Navbar Styling */
+nav {
+  background-color: #ffb6b9; /* Light pink background */
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav li {
+  margin-right: 2rem;
+}
+
+nav a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+}
+
+nav a:hover {
+  background-color: #ff7b7b;
+  transition: all 0.3s ease;
+}
+
+/* Home Page Text */
+.text-center {
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #ff4e6e; /* Soft rose color */
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #7f2a68;
+}
+
+/* Form Styling */
+.form-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-container h2 {
+  color: #ff7b7b;
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.form-container input[type="text"],
+.form-container input[type="number"],
+.form-container input[type="datetime-local"],
+.form-container textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+  border: 2px solid #ffd0d0; /* Light pink border */
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="number"]:focus,
+.form-container input[type="datetime-local"]:focus,
+.form-container textarea:focus {
+  border-color: #ff7b7b; /* Highlight border on focus */
+  box-shadow: 0 0 10px rgba(255, 122, 122, 0.5); /* Soft pink glow effect */
+}
+
+/* Placeholder text styling */
+.form-container input::placeholder,
+.form-container textarea::placeholder {
+  color: #bbb;
+  font-style: italic;
+}
+
+/* Button Styling */
+button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #ff4e6e; /* Soft rose color */
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff2d42;
+}
+
+button:disabled {
+  background-color: #d1d1d1;
+  cursor: not-allowed;
+}
+
+/* Utility Classes for Spacing */
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.m-4 {
+  margin: 1rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.space-x-4 {
+  display: flex;
+  gap: 1rem;
+}
+
+.space-y-4 > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+/* Heading Styles */
+h1,
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  color: #ff7b7b;
+}
+
+h2 {
+  color: #7f2a68;
+}
+
+h3 {
+  color: #c83b68;
+}
+
+/* General form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 24px;
+  background-color: #fef0f9; /* Soft pastel pink background */
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for input and textarea fields */
+input, textarea {
+  padding: 14px;
+  font-size: 16px;
+  border: 1px solid #f5b7b1; /* Light pink border */
+  border-radius: 12px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff1f3; /* Light pink background */
+  color: #6b4f4f; /* Slightly darker text color */
+}
+
+/* Focus effect for text fields */
+input:focus, textarea:focus {
+  border-color: #f28ab2; /* Slightly darker pink */
+  box-shadow: 0 0 8px rgba(242, 138, 178, 0.6); /* Cute glowing effect */
+}
+
+/* Styling for placeholder text */
+input::placeholder, textarea::placeholder {
+  color: #e9a7b8; /* Light pink for placeholders */
+}
+
+/* Styling for the submit button */
+button {
+  padding: 14px;
+  font-size: 16px;
+  background-color: #ffb0c1; /* Soft pastel pink button */
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #ff8f9b; /* Slightly darker pink */
+}
+
+/* Add some extra cuteness to form labels or headings (if any) */
+h1, h2 {
+  font-family: 'Comic Sans MS', sans-serif;
+  color: #ff74a6; /* Pastel pinkish heading */
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 0.5px;
+}
+
+/* Smooth transition effects for the entire form */
+form, input, textarea, button {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Dropdown styling */
+.select-container {
+  margin-top: 20px;
+}
+
+#patient-select {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid #ffd0d0; /* Soft pink border */
+  border-radius: 12px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+  color: #333;
+  outline: none;
+}
+
+#patient-select:focus {
+  border-color: #ff7b7b; /* Highlight border on focus */
+}
+
+/* Styling for displaying patient data */
+.patient-data-container {
+  margin-top: 30px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.patient-data-container h2 {
+  font-size: 1.5rem;
+  color: #ff7b7b;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.patient-data-container .patient-detail {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.patient-data-container .patient-detail strong {
+  color: #7f2a68; /* Darker pink for emphasis */
+  font-weight: 600;
+}
+
+/* Style for text inside data section */
+.patient-data-container .patient-detail span {
+  color: #333;
+  font-weight: normal;
+}
+
+/* General styling tweaks to maintain the theme */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #ff7b7b; /* Soft rose color */
+}
+
+.patient-form,
+.form-container {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.patient-form label,
+.form-container label {
+  display: block;
+  margin: 10px 0;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #7f2a68; /* Darker pink for labels */
+}
+
+.patient-form input,
+.patient-form textarea,
+.form-container input[type="text"],
+.form-container input[type="number"],
+.form-container input[type="datetime-local"],
+.form-container textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+  border: 2px solid #ffd0d0;
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.patient-form input:focus,
+.patient-form textarea:focus,
+.form-container input:focus,
+.form-container textarea:focus {
+  border-color: #ff7b7b; /* Highlight border on focus */
+}
+
+button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #ff4e6e; /* Soft rose color */
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff2d42;
+}
+
+button:disabled {
+  background-color: #d1d1d1;
+  cursor: not-allowed;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.m-4 {
+  margin: 1rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.space-x-4 {
+  display: flex;
+  gap: 1rem;
+}
+
+.space-y-4 > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+h1,
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  color: #ff7b7b;
+}
+
+h2 {
+  color: #7f2a68;
+}
+
+h3 {
+  color: #c83b68;
+}
+
+/* Small Dropdown Menu */
+#patient-select {
+  width: 160px; /* Increased width by 10px */
+  padding: 6px 12px; /* Smaller padding */
+  font-size: 0.875rem; /* Smaller font size */
+  border: 2px solid #ffd0d0; /* Light pink border */
+  border-radius: 12px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+  color: #333;
+  outline: none;
+}
+
+#patient-select:focus {
+  border-color: #ff7b7b; /* Highlight border on focus */
+}
+
+/* Adjusting the dropdown options */
+#patient-select option {
+  font-size: 0.875rem; /* Smaller font size for options */
+}
+
+#doctor-select {
+  width: 160px;
+  padding: 6px 12px;
+  font-size: 0.875rem;
+  border: 2px solid #ffd0d0;
+  border-radius: 12px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+  color: #333;
+  outline: none;
+}
+
+#doctor-select:focus {
+  border-color: #ff7b7b;
+}
+
+#doctor-select option {
+  font-size: 0.875rem;
+}
